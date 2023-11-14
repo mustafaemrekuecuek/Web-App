@@ -1,0 +1,24 @@
+<main>
+    <div class="d-flex w-100 d-grid ">
+        <%- include('MainComponents/menu.ejs') %>
+
+        <%- include('MainComponents/content.ejs') %>
+         
+        <%- include('MainComponents/taskdescription.ejs') %>
+    </div>
+</main>
+<script>
+    const checkboxes = document.querySelectorAll(".cb_done");
+    const formsCheckbox = document.querySelectorAll(".doneForm");
+
+    const formTask = document.querySelector
+    for (let i = 0; i < checkboxes.length; i++) {
+        checkboxes[i].addEventListener("input", () => {
+           formsCheckbox[i].submit();
+        });
+    };
+    
+    window.addEventListener('load', function() {
+        document.body.classList.add('loaded');
+    });
+</script>

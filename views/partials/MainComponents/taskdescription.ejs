@@ -1,0 +1,21 @@
+<% if(locals.task) {%>
+<section class="d-flex flex-column p-3 right-column">
+        <div class="edit-form">
+            <h2>Edit Task</h2>
+            <form method="post" action="/edit/<%= task.id %>">
+                <label for="task">Task Title:</label>
+                <input type="text" id="editTaskTitle" name="task" value="<%= task.task %>" required>
+    
+                <label for="description">Description:</label>
+                <textarea id="editTaskDescription" name="description" rows="4" ><%= task.description %></textarea>
+    
+                <label class="checkbox-label" for="priority">Priority:</label>
+                <input type="checkbox" id="editTaskPriority" name="priority" <% if(task.is_done) {%> checked <% } %>>
+    
+                <label for="date">Date:</label>
+                <input type="date" id="editTaskDate" name="date" value="<%= new Date(task.date).getFullYear() + "-" + (new Date(task.date).getMonth()+1).toString().padStart(2,'0') + "-" + new Date(task.date).getDate().toString().padStart(2,'0'); %>" required>
+                <button type="submit">Save Changes</button>
+            </form>
+        </div>
+</section>
+<% } %>

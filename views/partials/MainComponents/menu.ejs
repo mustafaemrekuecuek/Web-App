@@ -1,0 +1,42 @@
+<section
+  class="menu d-flex flex-column bg-body-secondary "
+>
+  <h1 class="d-flex justify-content-between p-2">
+    <span>MENU</span> <i class="bi bi-list"></i>
+  </h1>
+  <form action="/search">
+    <div class="input-group p-1">
+      <span class="input-group-text" id="basic-addon1">
+        <i class="bi bi-search"></i>
+      </span>
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Input group"
+        aria-label="Input group"
+        aria-describedby="basic-addon1"
+      />
+    </div>
+  </form>
+  <br>
+    <div class="TasksMenu-Container">
+        <h1>TASKS</h1>
+        <nav class="TaskMenu">
+            <div class="container-fluid">
+                <ul class="navbar-nav d-flex flex-column">
+                    <li class="nav-item">
+                        <a href="/upcoming" class="nav-link "><i class="bi bi-chevron-double-right"></i> Upcoming</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/today" class="nav-link "><i class="bi bi-list-check "></i> Today</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="/priority" class="nav-link "><i class="bi bi-list-check "></i> Priority</a>
+                    </li>
+                </ul>
+            </div>  
+        </nav>
+    </div>
+    <div class="ListsMenu">
+    </div>
+</section>

@@ -1,0 +1,247 @@
+body {
+    height: 100vh;
+    overflow: auto;
+    font-family: Arial, sans-serif;
+}
+.menu {
+    height: 100vh;
+}
+
+.content {
+  height: 100vh;
+  width: 100%;
+}
+textarea {
+    resize: none;
+    height: 200px;
+}
+
+/* Animation */
+.right-column {
+  width: 30%; /* Breite der rechten Spalte */
+  background-color: #ddd;
+  transform: translateX(100%); /* Startposition außerhalb des sichtbaren Bereichs */
+  transition: transform 0.5s; /* Übergangseffekt für transform */
+}
+
+/* Stiländerungen für die Animation */
+.loaded .right-column {
+  transform: translateX(0); /* Verschiebung auf die ursprüngliche Position */
+}
+/* Allgemeine Stilanpassungen */
+/* Stil für die Tabelle */
+table {
+    width: 100%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Stil für den Tabellenkopf (Spaltennamen) */
+th {
+    background-color: #007BFF;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px;
+    text-align: left;
+}
+
+/* Stil für Tabellenzeilen */
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Stil für die Checkboxen */
+input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+}
+
+/* Stil für die Löschen- und Editieren-Buttons */
+.actions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.actions button {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-right: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.actions button:hover {
+    background-color: #c82333;
+}
+
+/* Stil für die Aufgaben */
+td.task {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+/* Stil für das Datum */
+td.date {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    width: 20%;
+}
+
+  /* Stil für das Eingabeformular */
+.input-form {
+    width: 60%;
+    margin: 20px auto;
+    background-color: #fff;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+}
+
+/* Stil für Formularfelder */
+.input-form label {
+    font-weight: bold;
+    display: block;
+}
+
+.input-form input[type="text"],
+.input-form input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.input-form label.checkbox-label {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+/* Stil für den Submit-Button */
+.input-form button[type="submit"] {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.input-form button[type="submit"]:hover {
+    background-color: #218838;
+}
+
+  /* Stil für das Bearbeitungsformular */
+  .edit-form {
+    width: 100%;
+    background-color: #f8f9fa;
+    padding: 20px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Stil für Formularfelder */
+.edit-form label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.edit-form input[type="text"],
+.edit-form input[type="date"],
+.edit-form textarea,
+.edit-form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    background-color: #fff;
+}
+
+.edit-form label.checkbox-label {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+/* Stil für den Submit-Button */
+.edit-form button[type="submit"] {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.edit-form button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.checkbox-wrapper:hover .check {
+    stroke-dashoffset: 0;
+  }
+  
+  .checkbox-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+  }
+  
+  .checkbox-wrapper .background {
+    fill: #15cece;
+    transition: ease all 0.6s;
+    -webkit-transition: ease all 0.6s;
+  }
+  
+  .checkbox-wrapper .stroke {
+    fill: none;
+    stroke: #fff;
+    stroke-miterlimit: 10;
+    stroke-width: 2px;
+    stroke-dashoffset: 100;
+    stroke-dasharray: 100;
+    transition: ease all 0.6s;
+    -webkit-transition: ease all 0.6s;
+  }
+  
+  .checkbox-wrapper .check {
+    fill: none;
+    stroke: #fff;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 2px;
+    stroke-dashoffset: 22;
+    stroke-dasharray: 22;
+    transition: ease all 0.6s;
+    -webkit-transition: ease all 0.6s;
+  }
+  
+  .checkbox-wrapper input[type=checkbox] {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    margin: 0;
+    opacity: 0;
+    -appearance: none;
+    -webkit-appearance: none;
+  }
+  
+  .checkbox-wrapper input[type=checkbox]:hover {
+    cursor: pointer;
+  }
+  
+  .checkbox-wrapper input[type=checkbox]:checked + svg .background {
+    fill: #15cece;
+  }
+  
+  .checkbox-wrapper input[type=checkbox]:checked + svg .stroke {
+    stroke-dashoffset: 0;
+  }
+  
+  .checkbox-wrapper input[type=checkbox]:checked + svg .check {
+    stroke-dashoffset: 0;
+  }
